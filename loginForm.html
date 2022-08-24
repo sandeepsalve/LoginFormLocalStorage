@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="StyleSheet" href="StyleSheetLogin.css">
+    <script src="StoreValue.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form autocomplete="off">
+            <label for="UserName">UserName</label><br>
+            <input type="text" id="UserName" autocomplete="off">
+            <button type="button" id="checkAvailability" onclick="check()">checkAvailability</button><br>
+            <label for="PassWord">Password</label><br>
+            <input type="password" id="PassWord"><br><br>
+            <button type="button" id="Create" onclick="printMessage()">Sign UP</button>
+            <button type="button" id="Check" onclick="checkMessage()">Sign In</button>
+            <input type="reset" value="Reset">
+               
+        </form>
+    </div>
+</body>
+</html>
