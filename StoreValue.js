@@ -1,6 +1,13 @@
 function check(){
 let lengthofStoreditems=localStorage.length;
 let userName=document.getElementById('UserName').value;
+console.log(userName);
+if(userName==null||userName=="")
+{
+    alert("Enter Login Details");
+}
+else
+{
 let checkDigit=0;
 for(let i=0;i<=lengthofStoreditems;i++){
 if(userName==localStorage.key(i))
@@ -21,8 +28,18 @@ else
     alert("You can use This Username");
 }
 }
+}
+
+
 
 function printMessage(){
+    let passWord=document.getElementById('PassWord').value;
+    if(passWord==null||passWord=="")
+    {
+        alert("Enter Password");
+    }
+    else
+    {
     let returnValue=check();
     if(returnValue==1)
     {
@@ -31,13 +48,16 @@ function printMessage(){
     else{
     let userName=document.getElementById('UserName').value;
     console.log(userName);
-    let passWord=document.getElementById('PassWord').value;
+    
     console.log(passWord);
    localStorage.setItem(userName,passWord);
    alert("Sign Up Successful");
+    }
+    }
 }
+    
    
-}
+
 function checkMessage(){
     let userName=document.getElementById('UserName').value;
     let passWord=document.getElementById('PassWord').value;
